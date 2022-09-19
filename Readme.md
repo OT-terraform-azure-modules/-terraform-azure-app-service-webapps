@@ -61,14 +61,14 @@ For this App Service Plan count should be one and we then all the multiple App S
  app_service_plan_count   = "2"\
   app_service_plan_name     = ["azappserviceplan"]\
   app_service_count         = "2"\
-  app_service_name          = ["webapp1","webapp2"]\
+  app_service_name          = ["webapp1","webapp2"]
 
 #2
 ------------------
   app_service_plan_count    = "2"\
   app_service_plan_name     = ["azappserviceplan1", "azappserviceplan2"]\
   app_service_count         = "3"\
-  app_service_name          = ["webapp1", "webapp2", "webapp3"]\
+  app_service_name          = ["webapp1", "webapp2", "webapp3"]
 
 
 Terraform versions
