@@ -10,6 +10,60 @@ Azure App Service (Web App) Terraform Module
 
 Terraform module which creates App service and App service plan on Azure .
 
+Information:
+This module creates App Service and App Service Plan on Azure for both Linux and Windows OS.
+This modules can create multiple App Service plan and also create App Service respective of those App Service plans.
+
+App Service Plan:
+An App Service plan defines a set of compute resources for a web app to run. These compute resources are analogous to the server farm in conventional web hosting. One or more apps can be configured to run on the same computing resources (or in the same App Service plan).
+
+Each App Service plan defines:
+
+-Operating System (Windows, Linux)
+-Region (West US, East US, etc.)
+-Number of VM instances
+-Size of VM instances (Small, Medium, Large)
+-Pricing tier (Free, Shared, Basic, Standard, Premium, PremiumV2, PremiumV3, Isolated, IsolatedV2)
+
+Azure App Service:
+Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. You can develop in your favorite language, be it .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. Applications run and scale with ease on both Windows and Linux-based environments.
+
+List of SKU sizes:
+-Free Tier → F1
+-Shared Tier → D1
+-Basic Tier → B1, B2, B3 (Basic Small, Medium, Large)
+-Standard Tier → S1, S2, S3 (Small, Medium, Large)
+-PremiumV2 Tier → P1v2, P2v2, P3v2 (Small, Medium, Large)
+
+
+Case-1:
+
+If we want to create each App Service for each App Service plan.
+For this count number of App Service plan and App Service shold be same then each app service will create under the respective App Service Plan.
+
+  app_service_plan_count    = "2"
+  app_service_plan_name     = ["azappserviceplan1","azappserviceplan2"]
+  app_service_count         = "2"
+  app_service_name          = ["webapp1","webapp2"]
+
+Case-2:
+
+When we want to create multiple App Service for a single App Service plan.
+For this App Service Plan count should be one and we then all the multiple App Service will create under the same App Service Plan.
+
+#1
+ app_service_plan_count   = "2"
+  app_service_plan_name     = ["azappserviceplan"]
+  app_service_count         = "2"
+  app_service_name          = ["webapp1","webapp2"]
+
+#2
+  app_service_plan_count    = "2"
+  app_service_plan_name     = ["azappserviceplan1", "azappserviceplan2"]
+  app_service_count         = "3"
+  app_service_name          = ["webapp1", "webapp2", "webapp3"]
+
+
 Terraform versions
 ------------------
 Terraform v0.15.4

@@ -52,7 +52,7 @@ module "app_service" {
 #For this example we are using linux os.
 module "app_service_2" {
   source                    = "../"
-  app_service_plan_count    = "2"
+ app_service_plan_count    = "2" 
   app_service_plan_name     = ["azappserviceplan2"]
   app_service_count         = "2"
   app_service_name          = ["hellosrvwebapp","wolrdsrvwebapp"]
