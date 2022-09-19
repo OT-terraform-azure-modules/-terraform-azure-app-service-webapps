@@ -22,22 +22,23 @@ An App Service plan defines a set of compute resources for a web app to run. The
 
 Each App Service plan defines:
 
--Operating System (Windows, Linux)
--Region (West US, East US, etc.)
--Number of VM instances
--Size of VM instances (Small, Medium, Large)
--Pricing tier (Free, Shared, Basic, Standard, Premium, PremiumV2, PremiumV3, Isolated, IsolatedV2)
+1. Operating System (Windows, Linux)
+1. Region (West US, East US, etc.)
+1. Number of VM instances
+1. Size of VM instances (Small, Medium, Large)
+1. Pricing tier (Free, Shared, Basic, Standard, Premium, PremiumV2, PremiumV3, Isolated, IsolatedV2)
 
 Azure App Service:
 ------------------
 Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. You can develop in your favorite language, be it .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. Applications run and scale with ease on both Windows and Linux-based environments.
 
 List of SKU sizes:
-Free Tier → F1
--Shared Tier → D1
--Basic Tier → B1, B2, B3 (Basic Small, Medium, Large)
--Standard Tier → S1, S2, S3 (Small, Medium, Large)
--PremiumV2 Tier → P1v2, P2v2, P3v2 (Small, Medium, Large)
+---------
+1. Free Tier → F1
+1. Shared Tier → D1
+1. Basic Tier → B1, B2, B3 (Basic Small, Medium, Large)
+1. Standard Tier → S1, S2, S3 (Small, Medium, Large)
+1. PremiumV2 Tier → P1v2, P2v2, P3v2 (Small, Medium, Large)
 
 
 Case-1:
@@ -45,9 +46,9 @@ Case-1:
 If we want to create each App Service for each App Service plan.
 For this count number of App Service plan and App Service shold be same then each app service will create under the respective App Service Plan.
 
-  app_service_plan_count    = "2"
-  app_service_plan_name     = ["azappserviceplan1","azappserviceplan2"]
-  app_service_count         = "2"
+  app_service_plan_count    = "2"\
+  app_service_plan_name     = ["azappserviceplan1","azappserviceplan2"]\
+  app_service_count         = "2"\
   app_service_name          = ["webapp1","webapp2"]
 
 Case-2:
@@ -57,17 +58,17 @@ For this App Service Plan count should be one and we then all the multiple App S
 
 #1
 ------------------
- app_service_plan_count   = "2"
-  app_service_plan_name     = ["azappserviceplan"]
-  app_service_count         = "2"
-  app_service_name          = ["webapp1","webapp2"]
+ app_service_plan_count   = "2"\
+  app_service_plan_name     = ["azappserviceplan"]\
+  app_service_count         = "2"\
+  app_service_name          = ["webapp1","webapp2"]\
 
 #2
 ------------------
-  app_service_plan_count    = "2"
-  app_service_plan_name     = ["azappserviceplan1", "azappserviceplan2"]
-  app_service_count         = "3"
-  app_service_name          = ["webapp1", "webapp2", "webapp3"]
+  app_service_plan_count    = "2"\
+  app_service_plan_name     = ["azappserviceplan1", "azappserviceplan2"]\
+  app_service_count         = "3"\
+  app_service_name          = ["webapp1", "webapp2", "webapp3"]\
 
 
 Terraform versions
