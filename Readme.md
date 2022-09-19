@@ -74,7 +74,7 @@ Inputs
 | app_service_plan_name | Name of app service plan | `list(string)` | | yes |
 | app_service_plan_count| Mention the count to create the app service plan | `string` | | yes |
 | app_service_plan_location | Location of app service plan | `string` | | yes |
-| os_type | Operating system of ap service | `string` | | yes |
+| os_type | Operating system of app service | `string` | | yes |
 | reserved_os | Value is set to `false` for windows and set to `true` for Linux | `string` | `false` | no |
 | app_service_plan_sku | app service plan sku an d tier | `list(object)` |  | yes |
 | app_service_name | Name of app service | `list(string)` | | yes |
