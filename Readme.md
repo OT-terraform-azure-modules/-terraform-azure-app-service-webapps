@@ -75,6 +75,14 @@ Terraform versions
 ------------------
 Terraform v0.15.4
 
+Resources
+------
+| Name | Type |
+|------|------|
+| [azurerm_resource_group.rg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
+| [azurerm_app_service_plan.app_service_plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service_plan) | resource |
+| [azurerm_app_service.app_service](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service) | resource |
+
 
 Usage
 ------
@@ -115,17 +123,6 @@ module "app_service" {
 
 ```
 
-
-
-Resources
-------
-| Name | Type |
-|------|------|
-| [azurerm_resource_group.rg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
-| [azurerm_app_service_plan.app_service_plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service_plan) | resource |
-| [azurerm_app_service.app_service](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service) | resource |
-
-
 Inputs
 ------
 | Name | Description | Type | Default | Required |
@@ -156,7 +153,8 @@ Output
 | app_service_plan_name | Name of the app service plan |
 | app_service_name | Name of the app service |
 | app_service_location | Location of web app |
-
+| app_service_plan_id | The resource ID of the App Service Plan component |
+| app_service_id | The resource ID of the App Service component |
 
 ### Contributors
 

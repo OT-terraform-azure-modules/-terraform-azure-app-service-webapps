@@ -13,3 +13,13 @@ output "app_service_location" {
   value       = azurerm_app_service.app_service.*.location
 }
 
+
+output "app_service_plan_id" {
+  description = "The resource ID of the App Service Plan component"
+  value = azurerm_app_service_plan.app_service_plan.*.id
+}
+
+output "app_service_id" {
+  description = "The resource ID of the App Service component"
+  value = azurerm_app_service.app_service.*.id
+}
